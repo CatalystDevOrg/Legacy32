@@ -5,7 +5,7 @@ on:
     tags:
       - "*"
 jobs:
-  release64:
+  release:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -24,8 +24,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run publish
-  
-  release32:
+  release32bit:
+  # npm run publish -- --arch=ia32
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
