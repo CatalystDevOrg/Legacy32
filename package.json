@@ -43,7 +43,6 @@
     "dependencies": {
         "@cliqz/adblocker-electron": "^1.26.6",
         "cross-fetch": "^4.0.0",
-        "custom-electron-titlebar": "^4.2.5",
         "electron-context-menu": "^3.6.1",
         "electron-squirrel-startup": "^1.0.0",
         "update-electron-app": "^2.0.1"

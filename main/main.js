@@ -4,13 +4,10 @@ const path = require('path');
 const fs = require('fs');
 const fetch = require('cross-fetch');
 const contextMenu = require('electron-context-menu');
-const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-titlebar/main');
 
 if (require('electron-squirrel-startup')) app.quit();
 
 let mainWindow;
-
-setupTitlebar();
 
 function createWindow() {
     mainWindow = new BrowserWindow({
@@ -33,7 +30,6 @@ function createWindow() {
     mainWindow.loadFile('./src/index.html');
     mainWindow.setMenuBarVisibility(false);
     require('update-electron-app')();
-    attachTitlebarToWindow(mainWindow);
 }
 
 app.whenReady().then(() => {
